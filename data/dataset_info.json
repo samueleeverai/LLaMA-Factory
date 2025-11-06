@@ -24,6 +24,13 @@
       "tools": "tools"
     }
   },
+  "nsfw_eval": {
+    "file_name": "nsfw_eval.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
   "mllm_demo": {
     "file_name": "mllm_demo.json",
     "formatting": "sharegpt",
