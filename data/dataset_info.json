@@ -31,6 +31,48 @@
       "messages": "conversations"
     }
   },
+  "raven_no_format_dpo": {
+    "hf_hub_url": "Raven-Pro/no_format_dpo",
+    "ranking": true,
+    "columns": {
+      "prompt": "prompt",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "flammenai_casual_dpo": {
+    "hf_hub_url": "flammenai/casual-conversation-DPO",
+    "ranking": true,
+    "columns": {
+      "prompt": "prompt",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "jondurbin_truthy_dpo": {
+    "hf_hub_url": "jondurbin/truthy-dpo-v0.1",
+    "ranking": true,
+    "columns": {
+      "system": "system",
+      "prompt": "prompt",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
+  "gryphe_sonnet_roleplay": {
+    "hf_hub_url": "Gryphe/Sonnet3.5-Charcard-Roleplay",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
+  "undi95_r1_rp_sharegpt": {
+    "hf_hub_url": "Undi95/R1-RP-ShareGPT3",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    }
+  },
   "mllm_demo": {
     "file_name": "mllm_demo.json",
     "formatting": "sharegpt",
