@@ -1,0 +1,28 @@
+### model
+model_name_or_path: zai-org/GLM-4.5-Air
+trust_remote_code: true
+
+### method
+stage: sft
+do_predict: true
+finetuning_type: lora
+
+### dataset
+eval_dataset: nsfw_eval
+template: glm4_moe
+cutoff_len: 8192
+max_samples: 100
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: PLACEHOLDER
+overwrite_output_dir: true
+report_to: none
+
+### eval
+per_device_eval_batch_size: 1
+predict_with_generate: true
+ddp_timeout: 180000000
+
