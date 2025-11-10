@@ -30,7 +30,7 @@ report_to: wandb
 
 ### train
 deepspeed: examples/deepspeed/ds_z3_config.json
-per_device_train_batch_size: 1
+per_device_train_batch_size: 4
 gradient_accumulation_steps: 1
 learning_rate: 5.0e-6
 num_train_epochs: 1.0
@@ -49,5 +49,4 @@ eval_steps: 100
 push_to_hub: true
 hub_model_id: EverAI-AI/glm-air-45-samu-sft
 hub_strategy: every_save
-hub_token: env:HF_TOKEN
 
