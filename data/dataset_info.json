@@ -59,6 +59,15 @@
       "rejected": "rejected"
     }
   },
+  "weyaxi_humanish_dpo": {
+    "hf_hub_url": "Undi95/Weyaxi-humanish-dpo-project-noemoji",
+    "ranking": true,
+    "columns": {
+      "prompt": "prompt",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
   "gryphe_sonnet_roleplay": {
     "hf_hub_url": "Gryphe/Sonnet3.5-Charcard-Roleplay",
     "formatting": "sharegpt",
