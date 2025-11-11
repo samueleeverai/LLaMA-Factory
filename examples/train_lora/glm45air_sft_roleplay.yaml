@@ -38,6 +38,7 @@ lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
 ddp_timeout: 180000000
+resume_from_checkpoint: EverAI-AI/glm-air-45-samu-sft
 
 ### eval
 val_size: 0.01
