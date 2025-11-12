@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: EverAI-AI/glm-air-45-samu-sft
+model_name_or_path: EverAI-AI/glm-air-45-samu-sft-merged
 trust_remote_code: true
 
 ### method
@@ -27,12 +27,12 @@ logging_steps: 1
 save_steps: 100
 plot_loss: true
 overwrite_output_dir: true
-save_only_model: true
+save_only_model: false
 report_to: wandb
 
 ### train
 deepspeed: examples/deepspeed/ds_z3_config.json
-per_device_train_batch_size: 1
+per_device_train_batch_size: 4
 gradient_accumulation_steps: 1
 learning_rate: 5.0e-7
 num_train_epochs: 1.0
@@ -43,7 +43,7 @@ ddp_timeout: 180000000
 
 ### eval
 val_size: 0.01
-per_device_eval_batch_size: 1
+per_device_eval_batch_size: 4
 eval_strategy: steps
 eval_steps: 100
 
@@ -51,5 +51,4 @@ eval_steps: 100
 push_to_hub: true
 hub_model_id: EverAI-AI/glm-air-45-samu-dpo
 hub_strategy: every_save
-hub_token: env:HF_TOKEN
 
