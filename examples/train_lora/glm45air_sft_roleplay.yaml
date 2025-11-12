@@ -25,7 +25,7 @@ logging_steps: 1
 save_steps: 100
 plot_loss: true
 overwrite_output_dir: true
-save_only_model: true
+save_only_model: false
 report_to: wandb
 
 ### train
