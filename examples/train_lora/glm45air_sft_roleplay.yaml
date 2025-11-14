@@ -10,7 +10,7 @@ lora_rank: 256
 lora_target: all
 
 ### dataset
-dataset: gryphe_sonnet_roleplay,undi95_r1_rp_sharegpt,glaive_toolcall_en_demo
+dataset: gryphe_sonnet_roleplay,undi95_r1_rp_sharegpt
 template: glm4_moe
 cutoff_len: 8192
 max_samples: 100000
