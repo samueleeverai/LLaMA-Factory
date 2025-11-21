@@ -1,0 +1,56 @@
+### model
+model_name_or_path: EverAI-AI/glm-air-45-samu-sft-merged
+trust_remote_code: true
+enable_liger_kernel: true 
+use_unsloth_gc: true 
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 256
+lora_target: all
+
+### dataset
+dataset: prod_convo_32k
+template: glm4_moe
+cutoff_len: 32768
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+packing: false
+enable_thinking: false
+
+### output
+output_dir: saves/glm45air/lora/sft_roleplay_32k
+logging_steps: 1
+save_steps: 10
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: wandb
+
+### train
+deepspeed: examples/deepspeed/ds_z3_config.json
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 4
+learning_rate: 6.0e-6
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: EverAI-AI/glm-air-45-samu-sft-merged
+
+### eval
+val_size: 0.05
+per_device_eval_batch_size: 1
+eval_strategy: steps
+eval_steps: 10
+
+### hub
+push_to_hub: true
+hub_model_id: EverAI-AI/glm-air-45-samu-sft-32k
+hub_strategy: every_save
+
