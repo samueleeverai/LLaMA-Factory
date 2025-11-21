@@ -1,5 +1,6 @@
 ### model
-model_name_or_path: EverAI-AI/glm-air-45-samu-sft
+model_name_or_path: zai-org/GLM-4.5-Air
+adapter_name_or_path: EverAI-AI/glm-air-45-samu-sft
 trust_remote_code: true
 enable_liger_kernel: true 
 use_unsloth_gc: true 
@@ -27,7 +28,7 @@ output_dir: saves/glm45air/lora/sft_roleplay_32k
 logging_steps: 1
 save_steps: 10
 plot_loss: true
-overwrite_output_dir: true
+overwrite_output_dir: false
 save_only_model: false
 report_to: wandb
 
@@ -41,7 +42,7 @@ lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
 ddp_timeout: 180000000
-resume_from_checkpoint: EverAI-AI/glm-air-45-samu-sft-merged
+resume_from_checkpoint: null # in theory I am loading the base model then resuming training from the adapter
 
 ### eval
 val_size: 0.05
