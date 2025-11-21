@@ -31,6 +31,20 @@
       "messages": "conversations"
     }
   },
+  "prod_convo_32k": {
+    "hf_hub_url": "EverAI-AI/long_context_32k_max_convo",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
   "raven_no_format_dpo": {
     "hf_hub_url": "Raven-Pro/no_format_dpo",
     "ranking": true,
