@@ -1,5 +1,5 @@
 ### model
-model_name_or_path: EverAI-AI/glm-air-45-samu-sft-merged
+model_name_or_path: EverAI-AI/glm-air-45-samu-sft
 trust_remote_code: true
 enable_liger_kernel: true 
 use_unsloth_gc: true 
