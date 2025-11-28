@@ -4,6 +4,7 @@ adapter_name_or_path: EverAI-AI/glm-air-45-samu-sft
 trust_remote_code: true
 enable_liger_kernel: true 
 use_unsloth_gc: true 
+gradient_checkpointing: true
 
 ### method
 stage: sft
@@ -15,7 +16,7 @@ lora_target: all
 ### dataset
 dataset: prod_convo_32k
 template: glm4_moe
-cutoff_len: 32768
+cutoff_len: 16384
 max_samples: 100000
 overwrite_cache: true
 preprocessing_num_workers: 16
