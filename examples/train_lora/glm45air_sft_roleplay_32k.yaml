@@ -2,7 +2,7 @@
 model_name_or_path: zai-org/GLM-4.5-Air
 adapter_name_or_path: EverAI-AI/glm-air-45-samu-sft
 trust_remote_code: true
-enable_liger_kernel: true 
+enable_liger_kernel: false 
 use_unsloth_gc: true 
 gradient_checkpointing: true
 
