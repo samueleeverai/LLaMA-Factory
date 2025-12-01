@@ -1,0 +1,53 @@
+### model
+model_name_or_path: ArliAI/GLM-4.5-Air-Derestricted
+trust_remote_code: true
+
+### method
+stage: sft
+do_train: true
+finetuning_type: lora
+lora_rank: 256
+lora_target: all
+
+### dataset
+dataset: gryphe_sonnet_roleplay,undi95_r1_rp_sharegpt
+template: glm4_moe
+cutoff_len: 8192
+max_samples: 100000
+overwrite_cache: true
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+packing: false
+
+### output
+output_dir: saves/glm45air/lora/sft_roleplay_uncensored
+logging_steps: 1
+save_steps: 100
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+report_to: wandb
+
+### train
+deepspeed: examples/deepspeed/ds_z3_config.json
+per_device_train_batch_size: 4
+gradient_accumulation_steps: 1
+learning_rate: 6.0e-6
+num_train_epochs: 2.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null #EverAI-AI/glm-air-45-samu-sft
+
+### eval
+val_size: 0.01
+per_device_eval_batch_size: 4
+eval_strategy: steps
+eval_steps: 100
+
+### hub
+push_to_hub: true
+hub_model_id: EverAI-AI/glm-air-45-samu-sft-uncensored
+hub_strategy: every_save
+
