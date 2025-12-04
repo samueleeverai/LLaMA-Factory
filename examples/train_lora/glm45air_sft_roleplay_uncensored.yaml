@@ -8,7 +8,9 @@ do_train: true
 finetuning_type: lora
 lora_rank: 256
 lora_target: all
-loraplus_lr_ratio: 16.0
+# loraplus_lr_ratio: 16.0
+use_rslora: true
+use_dora: true
 
 ### dataset
 dataset: gryphe_sonnet_roleplay,undi95_r1_rp_sharegpt
