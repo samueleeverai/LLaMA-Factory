@@ -45,6 +45,20 @@
       "system_tag": "system"
     }
   },
+  "grok_convo": {
+    "hf_hub_url": "EverAI-AI/Isabella-Grok-8k",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
   "raven_no_format_dpo": {
     "hf_hub_url": "Raven-Pro/no_format_dpo",
     "ranking": true,

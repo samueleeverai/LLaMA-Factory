@@ -13,7 +13,7 @@ use_rslora: true
 use_dora: true
 
 ### dataset
-dataset: gryphe_sonnet_roleplay,undi95_r1_rp_sharegpt
+dataset: grok_convo
 template: glm4_moe
 cutoff_len: 8192
 max_samples: 100000
@@ -35,7 +35,7 @@ report_to: wandb
 deepspeed: examples/deepspeed/ds_z3_config.json
 per_device_train_batch_size: 4
 gradient_accumulation_steps: 1
-learning_rate: 2e-5
+learning_rate: 1e-5
 num_train_epochs: 2.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
