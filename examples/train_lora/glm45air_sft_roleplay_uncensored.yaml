@@ -47,7 +47,7 @@ resume_from_checkpoint: null #EverAI-AI/glm-air-45-samu-sft
 val_size: 0.01
 per_device_eval_batch_size: 4
 eval_strategy: steps
-eval_steps: 100
+eval_steps: 10
 
 ### hub
 push_to_hub: true
