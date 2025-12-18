@@ -13,7 +13,7 @@ use_rslora: true
 use_dora: true
 
 ### dataset
-dataset: grok_convo
+dataset: grok_convo_train
 template: glm4_moe
 cutoff_len: 8192
 max_samples: 100000
@@ -36,7 +36,7 @@ deepspeed: examples/deepspeed/ds_z3_config.json
 per_device_train_batch_size: 4
 gradient_accumulation_steps: 1
 learning_rate: 1e-5
-num_train_epochs: 10.0
+num_train_epochs: 2.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
 bf16: true
@@ -44,10 +44,14 @@ ddp_timeout: 180000000
 resume_from_checkpoint: null #EverAI-AI/glm-air-45-samu-sft
 
 ### eval
-val_size: 0.01
+eval_dataset: grok_convo_test
 per_device_eval_batch_size: 4
 eval_strategy: steps
 eval_steps: 5
+load_best_model_at_end: true
+metric_for_best_model: eval_loss
+greater_is_better: false
+save_total_limit: 3
 
 ### hub
 push_to_hub: true

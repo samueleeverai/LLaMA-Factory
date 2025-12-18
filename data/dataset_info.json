@@ -45,8 +45,24 @@
       "system_tag": "system"
     }
   },
-  "grok_convo": {
+  "grok_convo_train": {
     "hf_hub_url": "EverAI-AI/Isabella-Grok-8k",
+    "split": "train",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "grok_convo_test": {
+    "hf_hub_url": "EverAI-AI/Isabella-Grok-8k",
+    "split": "test",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
