@@ -2,7 +2,7 @@
 
 ### model
 model_name_or_path: ArliAI/GLM-4.5-Air-Derestricted
-adapter_name_or_path: saves/glm45air/lora/sft_roleplay_uncensored
+adapter_name_or_path: EverAI-AI/glm-air-45-samu-sft-uncensored
 template: glm4_moe
 trust_remote_code: true
 
