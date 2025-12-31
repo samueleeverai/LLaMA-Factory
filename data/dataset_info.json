@@ -115,21 +115,37 @@
   "swipes_dpo_train": {
     "hf_hub_url": "EverAI-AI/llmv3-swipes-dpo",
     "split": "train",
+    "formatting": "sharegpt",
     "ranking": true,
     "columns": {
-      "prompt": "prompt",
+      "messages": "prompt",
       "chosen": "chosen",
       "rejected": "rejected"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
     }
   },
   "swipes_dpo_test": {
     "hf_hub_url": "EverAI-AI/llmv3-swipes-dpo",
     "split": "test",
+    "formatting": "sharegpt",
     "ranking": true,
     "columns": {
-      "prompt": "prompt",
+      "messages": "prompt",
       "chosen": "chosen",
       "rejected": "rejected"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
     }
   },
   "gryphe_sonnet_roleplay": {
