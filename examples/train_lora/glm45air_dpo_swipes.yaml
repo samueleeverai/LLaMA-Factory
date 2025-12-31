@@ -54,5 +54,5 @@ save_total_limit: 3
 
 ### hub
 push_to_hub: true
-hub_model_id: EverAI-AI/glm-air-45-samu-dpo-
+hub_model_id: EverAI-AI/glm-air-45-samu-dpo
 hub_strategy: every_save
