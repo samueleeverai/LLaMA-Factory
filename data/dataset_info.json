@@ -112,6 +112,25 @@
       "rejected": "rejected"
     }
   },
+  "swipes_dpo_train": {
+    "hf_hub_url": "EverAI-AI/llmv3-swipes-dpo",
+    "split": "train",
+    "ranking": true,
+    "columns": {
+      "prompt": "prompt",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+    "swipes_dpo_test": {
+    "hf_hub_url": "EverAI-AI/llmv3-swipes-dpo",
+    "split": "test",
+    "ranking": true,
+    "columns": {
+      "prompt": "prompt",
+      "chosen": "chosen",
+      "rejected": "rejected"
+    }
+  },
   "gryphe_sonnet_roleplay": {
     "hf_hub_url": "Gryphe/Sonnet3.5-Charcard-Roleplay",
     "formatting": "sharegpt",
