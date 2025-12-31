@@ -121,7 +121,8 @@
       "chosen": "chosen",
       "rejected": "rejected"
     }
-    "swipes_dpo_test": {
+  },
+  "swipes_dpo_test": {
     "hf_hub_url": "EverAI-AI/llmv3-swipes-dpo",
     "split": "test",
     "ranking": true,
